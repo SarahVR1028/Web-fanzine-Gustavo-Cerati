@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Y el after del after? - Historia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="menu">
+    <div class="contenedor">
+      <a href="index.html" class="logo">¿Y EL AFTER <span>DEL AFTER?</span></a>
+      <button class="boton-menu" id="boton-menu">☰</button>
+      <nav>
+        <ul id="lista-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="historia.html" class="activo">Historia</a></li>
+          <li><a href="discografia.html">Discografía</a></li>
+          <li><a href="escuchar.html">Escuchar</a></li>
+          <li><a href="legado.html">Legado</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="titulo-pagina fondo-azul">
+    <div class="contenedor" data-aos="fade-up">
+      <span class="numero">02 · EL UNIVERSO MUSICAL</span>
+      <h1>Su historia</h1>
+      <p>Un recorrido corto por los momentos más importantes de su carrera.</p>
+    </div>
+  </section>
+
+  <section class="historia">
+    <div class="contenedor historia-con-foto">
+      <div>
+        <div class="etapa" data-aos="fade-up">
+          <span class="num">01</span>
+          <div>
+            <h2>Los inicios</h2>
+            <p>
+              Gustavo Cerati nació el 11 de agosto de 1959 en Buenos Aires. Desde joven
+              tocaba guitarra en grupos y escuchaba a bandas como The Beatles, The Police
+              y The Cure, que influyeron mucho en su sonido.
+            </p>
+          </div>
+        </div>
+
+        <div class="etapa" data-aos="fade-up">
+          <span class="num">02</span>
+          <div>
+            <h2>Soda Stereo</h2>
+            <p>
+              En 1982 formó Soda Stereo con Zeta Bosio y Charly Alberti. La banda se volvió
+              famosa en toda Latinoamérica con discos como <i>Signos</i> y <i>Canción animal</i>.
+              Se despidieron en 1997 con un gran concierto en el estadio de River Plate.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div data-aos="zoom-in">
+        <div class="foto">
+          <img src="assets/images/historia.jpg" alt="Gustavo Cerati con su guitarra">
+        </div>
+        <p class="pie-foto">Gustavo Cerati en vivo.</p>
+      </div>
+    </div>
+
+    <div class="contenedor">
+      <p class="cita" data-aos="fade-right">
+        «Gracias totales.»
+        <small>— Gustavo Cerati, último concierto de Soda Stereo, 20 de septiembre de 1997</small>
+      </p>
+
+      <div class="etapa" data-aos="fade-up">
+        <span class="num">03</span>
+        <div>
+          <h2>La carrera solista</h2>
+          <p>
+            Mientras Soda Stereo seguía activo, lanzó <i>Amor Amarillo</i> (1993), un disco
+            muy personal grabado en su casa en Chile. Después de la separación de la banda,
+            con <i>Bocanada</i> (1999) empezó de lleno su etapa como solista.
+          </p>
+        </div>
+      </div>
+
+      <div class="etapa" data-aos="fade-up">
+        <span class="num">04</span>
+        <div>
+          <h2>Siempre experimentando</h2>
+          <p>
+            Cerati nunca hizo dos discos iguales. Probó la electrónica, grabó sus canciones
+            con orquesta en <i>11 episodios sinfónicos</i> (2001), volvió al rock de guitarras
+            en <i>Ahí Vamos</i> y terminó con el sonido más acústico de <i>Fuerza Natural</i>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LÍNEA DE TIEMPO INTERACTIVA -->
+  <section class="linea-tiempo">
+    <div class="contenedor">
+      <h2 data-aos="fade-up">Línea de tiempo</h2>
+      <p>Haz clic en un año para ver qué pasó.</p>
+
+      <div class="anios" id="anios">
+        <!-- Los botones se crean con JavaScript -->
+      </div>
+
+      <div class="info-anio" id="info-anio">
+        <!-- Aquí aparece la información del año elegido -->
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>¿Y el after del after? · Fanzine digital sobre Gustavo Cerati · Proyecto académico 2026</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

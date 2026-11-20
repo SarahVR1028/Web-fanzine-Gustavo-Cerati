@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Y el after del after? - Discografía</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="menu">
+    <div class="contenedor">
+      <a href="index.html" class="logo">¿Y EL AFTER <span>DEL AFTER?</span></a>
+      <button class="boton-menu" id="boton-menu">☰</button>
+      <nav>
+        <ul id="lista-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="discografia.html" class="activo">Discografía</a></li>
+          <li><a href="escuchar.html">Escuchar</a></li>
+          <li><a href="legado.html">Legado</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="titulo-pagina fondo-negro">
+    <div class="contenedor" data-aos="fade-up">
+      <span class="numero">03 · ÁLBUMES</span>
+      <h1>La discografía</h1>
+      <p>Sus cinco discos de estudio como solista. Pasa el cursor por las portadas y haz clic en «Conocer más».</p>
+    </div>
+  </section>
+
+  <div class="contenedor discos">
+
+    <article class="disco" data-aos="flip-left">
+      <div class="foto"><img src="assets/images/albums/amor-amarillo.jpg" alt="Portada de Amor Amarillo"></div>
+      <div class="disco-texto">
+        <h2>Amor Amarillo</h2>
+        <span class="anio">1993</span>
+        <p>Un disco íntimo y experimental, grabado casi todo en su casa en Santiago de Chile.</p>
+        <ul>
+          <li>Te llevo para que me lleves</li>
+          <li>Pulsar</li>
+          <li>Lisa</li>
+        </ul>
+        <p class="nota">Su primer paso fuera de Soda Stereo.</p>
+        <button class="boton" data-disco="0">Conocer más</button>
+      </div>
+    </article>
+
+    <article class="disco" data-aos="flip-left" data-aos-delay="100">
+      <div class="foto"><img src="assets/images/albums/bocanada.jpg" alt="Portada de Bocanada"></div>
+      <div class="disco-texto">
+        <h2>Bocanada</h2>
+        <span class="anio">1999</span>
+        <p>Mezcla rock, electrónica y orquesta. Para muchos es su mejor disco.</p>
+        <ul>
+          <li>Puente</li>
+          <li>Raíz</li>
+          <li>Paseo inmoral</li>
+        </ul>
+        <p class="nota">El disco que definió su estilo como solista.</p>
+        <button class="boton" data-disco="1">Conocer más</button>
+      </div>
+    </article>
+
+    <article class="disco" data-aos="flip-left" data-aos-delay="200">
+      <div class="foto"><img src="assets/images/albums/siempre-es-hoy.jpg" alt="Portada de Siempre es Hoy"></div>
+      <div class="disco-texto">
+        <h2>Siempre es Hoy</h2>
+        <span class="anio">2002</span>
+        <p>Un disco largo y bailable, con mucha electrónica y pop.</p>
+        <ul>
+          <li>Cosas imposibles</li>
+          <li>Karaoke</li>
+          <li>Artefacto</li>
+        </ul>
+        <p class="nota">Con los años se volvió uno de los favoritos de sus fans.</p>
+        <button class="boton" data-disco="2">Conocer más</button>
+      </div>
+    </article>
+
+    <article class="disco" data-aos="flip-left">
+      <div class="foto"><img src="assets/images/albums/ahi-vamos.jpg" alt="Portada de Ahí Vamos"></div>
+      <div class="disco-texto">
+        <h2>Ahí Vamos</h2>
+        <span class="anio">2006</span>
+        <p>El regreso al rock con guitarras eléctricas y canciones más directas.</p>
+        <ul>
+          <li>Crimen</li>
+          <li>La excepción</li>
+          <li>Adiós</li>
+        </ul>
+        <p class="nota">Aquí están algunos de sus temas más cantados.</p>
+        <button class="boton" data-disco="3">Conocer más</button>
+      </div>
+    </article>
+
+    <article class="disco" data-aos="flip-left" data-aos-delay="100">
+      <div class="foto"><img src="assets/images/albums/fuerza-natural.jpg" alt="Portada de Fuerza Natural"></div>
+      <div class="disco-texto">
+        <h2>Fuerza Natural</h2>
+        <span class="anio">2009</span>
+        <p>Un sonido más acústico y folk, con guitarras y mandolinas.</p>
+        <ul>
+          <li>Déjà vu</li>
+          <li>Fuerza natural</li>
+          <li>Magia</li>
+        </ul>
+        <p class="nota">Su último disco de estudio.</p>
+        <button class="boton" data-disco="4">Conocer más</button>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- VENTANA CON MÁS INFORMACIÓN (se llena con JavaScript) -->
+  <div class="ventana" id="ventana">
+    <div class="ventana-contenido">
+      <button class="cerrar" id="cerrar">×</button>
+      <div id="ventana-info"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>¿Y el after del after? · Fanzine digital sobre Gustavo Cerati · Proyecto académico 2026</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
