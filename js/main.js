@@ -1,26 +1,15 @@
-/* ===================================
-   ¿Y EL AFTER DEL AFTER? - JavaScript
-   Un solo archivo para todas las páginas.
-   Cada parte revisa si existe su elemento
-   antes de ejecutarse.
-   =================================== */
-
-// 1. Iniciar la librería AOS (animaciones al hacer scroll)
 if (typeof AOS !== "undefined") {
   AOS.init({
-    duration: 1000, // cuánto dura la animación (en milisegundos)
-    once: true      // la animación solo pasa una vez
+    duration: 1000,
+    once: true
   });
 } else {
-  // Si AOS no carga (por ejemplo sin internet), quito las animaciones
-  // para que el contenido no quede invisible
   document.querySelectorAll("[data-aos]").forEach(function (elemento) {
     elemento.removeAttribute("data-aos");
   });
 }
 
 
-// 2. Menú para celular
 const botonMenu = document.getElementById("boton-menu");
 const listaMenu = document.getElementById("lista-menu");
 
@@ -31,11 +20,9 @@ if (botonMenu) {
 }
 
 
-// 3. Si una imagen no carga, se esconde y queda el cuadro gris
 const imagenes = document.querySelectorAll(".foto img");
 
 imagenes.forEach(function (imagen) {
-  // por si la imagen ya falló antes de que cargara este archivo
   if (imagen.complete && imagen.naturalWidth === 0) {
     imagen.classList.add("sin-imagen");
   }
@@ -45,7 +32,6 @@ imagenes.forEach(function (imagen) {
 });
 
 
-// 4. LÍNEA DE TIEMPO (historia.html)
 const anios = document.getElementById("anios");
 
 if (anios) {
@@ -65,7 +51,6 @@ if (anios) {
 
   const infoAnio = document.getElementById("info-anio");
 
-  // Crear un botón por cada año
   momentos.forEach(function (momento, i) {
     const boton = document.createElement("button");
     boton.textContent = momento.anio;
@@ -82,7 +67,6 @@ if (anios) {
       "<h3>" + momento.titulo + "</h3>" +
       "<p>" + momento.texto + "</p>";
 
-    // Marcar el botón activo
     const botones = anios.querySelectorAll("button");
     botones.forEach(function (b) {
       b.classList.remove("activo");
@@ -90,11 +74,10 @@ if (anios) {
     botones[i].classList.add("activo");
   }
 
-  mostrarMomento(0); // mostrar el primero al cargar
+  mostrarMomento(0);
 }
 
 
-// 5. VENTANA DE CADA DISCO (discografia.html)
 const ventana = document.getElementById("ventana");
 
 if (ventana) {
@@ -190,7 +173,6 @@ if (ventana) {
 
   document.getElementById("cerrar").addEventListener("click", cerrarVentana);
 
-  // También se cierra al hacer clic afuera o con la tecla Escape
   ventana.addEventListener("click", function (e) {
     if (e.target === ventana) {
       cerrarVentana();
@@ -202,18 +184,16 @@ if (ventana) {
     }
   });
 }
-// 6. SONIDO DE GUITARRA
-// Suena al hacer clic en el botón de guitarra (escuchar.html),
-// en el vinilo de la portada y en las portadas de los discos.
+
+
 const guitarra = new Audio("assets/audio/guitarra.mp3");
 
 function tocarGuitarra(elemento) {
-  guitarra.currentTime = 0; // vuelve al inicio por si ya estaba sonando
+  guitarra.currentTime = 0;
   guitarra.play();
 
-  // pequeña animación para que se note que sonó
   elemento.classList.remove("sonando");
-  void elemento.offsetWidth; // truco para poder repetir la animación
+  void elemento.offsetWidth;
   elemento.classList.add("sonando");
 }
 
@@ -224,4 +204,3 @@ cosasQueSuenan.forEach(function (elemento) {
     tocarGuitarra(elemento);
   });
 });
-
