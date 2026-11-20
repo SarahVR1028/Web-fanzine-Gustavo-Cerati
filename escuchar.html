@@ -30,56 +30,51 @@
     <div class="contenedor" data-aos="fade-up">
       <span class="numero">04 · FRECUENCIAS</span>
       <h1>Escuchar</h1>
-      <p>Dale play y escucha mientras recorres el fanzine.</p>
+      <p>Sus canciones más importantes, de Soda Stereo a su etapa solista.</p>
     </div>
   </section>
 
   <div class="contenedor escuchar">
 
-    <!-- REPRODUCTOR -->
-    <div class="reproductor" data-aos="zoom-in">
-      <!-- Disco hecho solo con CSS -->
-      <div class="disco-giratorio" id="disco-giratorio"></div>
-      <h2 id="nombre-cancion">Nombre de la canción</h2>
-      <p class="disco-nombre" id="disco-cancion">Disco</p>
-
-      <input type="range" class="barra" id="barra" value="0" min="0" max="100">
-      <div class="tiempos">
-        <span id="tiempo-actual">0:00</span>
-        <span id="tiempo-total">0:00</span>
-      </div>
-
-      <div class="controles">
-        <button id="anterior">⏮</button>
-        <button id="play">▶</button>
-        <button id="siguiente">⏭</button>
-      </div>
-
-      <audio id="audio"></audio>
-    </div>
-
-    <!-- LISTAS -->
-    <div class="lista" data-aos="fade-left">
-      <h2>Lista de reproducción</h2>
-      <ul class="lista-canciones" id="lista-canciones">
-        <!-- Se llena con JavaScript -->
+    <!-- CANCIONES CON ENLACES -->
+    <div class="lista" data-aos="fade-right">
+      <h2>Soda Stereo</h2>
+      <ul class="enlaces-canciones">
+        <li>Persiana americana (Signos, 1986)
+          <span>
+            <a href="https://www.youtube.com/results?search_query=Soda+Stereo+Persiana+americana" target="_blank">YouTube</a>
+            <a href="https://open.spotify.com/search/Soda%20Stereo%20Persiana%20americana" target="_blank">Spotify</a>
+          </span>
+        </li>
+        <li>De música ligera (Canción animal, 1990)
+          <span>
+            <a href="https://www.youtube.com/results?search_query=Soda+Stereo+De+musica+ligera" target="_blank">YouTube</a>
+            <a href="https://open.spotify.com/search/Soda%20Stereo%20De%20musica%20ligera" target="_blank">Spotify</a>
+          </span>
+        </li>
+        <li>Té para tres (Canción animal, 1990)
+          <span>
+            <a href="https://www.youtube.com/results?search_query=Soda+Stereo+Te+para+tres" target="_blank">YouTube</a>
+            <a href="https://open.spotify.com/search/Soda%20Stereo%20Te%20para%20tres" target="_blank">Spotify</a>
+          </span>
+        </li>
       </ul>
 
-      <h2>Canciones de Cerati</h2>
+      <h2>Cerati solista</h2>
       <ul class="enlaces-canciones">
+        <li>Te llevo para que me lleves (Amor Amarillo, 1993)
+          <span>
+            <a href="https://www.youtube.com/results?search_query=Gustavo+Cerati+Te+llevo+para+que+me+lleves" target="_blank">YouTube</a>
+            <a href="https://open.spotify.com/search/Cerati%20Te%20llevo%20para%20que%20me%20lleves" target="_blank">Spotify</a>
+          </span>
+        </li>
         <li>Puente (Bocanada, 1999)
           <span>
             <a href="https://www.youtube.com/results?search_query=Gustavo+Cerati+Puente" target="_blank">YouTube</a>
             <a href="https://open.spotify.com/search/Cerati%20Puente" target="_blank">Spotify</a>
           </span>
         </li>
-        <li>Te llevo para que me lleves (1993)
-          <span>
-            <a href="https://www.youtube.com/results?search_query=Gustavo+Cerati+Te+llevo+para+que+me+lleves" target="_blank">YouTube</a>
-            <a href="https://open.spotify.com/search/Cerati%20Te%20llevo%20para%20que%20me%20lleves" target="_blank">Spotify</a>
-          </span>
-        </li>
-        <li>Cosas imposibles (2002)
+        <li>Cosas imposibles (Siempre es Hoy, 2002)
           <span>
             <a href="https://www.youtube.com/results?search_query=Gustavo+Cerati+Cosas+imposibles" target="_blank">YouTube</a>
             <a href="https://open.spotify.com/search/Cerati%20Cosas%20imposibles" target="_blank">Spotify</a>
@@ -97,13 +92,21 @@
             <a href="https://open.spotify.com/search/Cerati%20Deja%20vu" target="_blank">Spotify</a>
           </span>
         </li>
-        <li>De música ligera (Soda Stereo, 1990)
-          <span>
-            <a href="https://www.youtube.com/results?search_query=Soda+Stereo+De+musica+ligera" target="_blank">YouTube</a>
-            <a href="https://open.spotify.com/search/Soda%20Stereo%20De%20musica%20ligera" target="_blank">Spotify</a>
-          </span>
-        </li>
       </ul>
+    </div>
+
+    <!-- CAJA DE LA GUITARRA -->
+    <div class="caja-guitarra" data-aos="fade-left">
+      <h2>Toca un acorde</h2>
+      <p>Haz clic en el botón para escuchar un acorde de guitarra.</p>
+      <button class="boton-guitarra" id="boton-guitarra">🎸</button>
+      <p class="nota">Tip: el vinilo de la portada y las portadas de los discos también suenan si les das clic.</p>
+
+      <h3>Escúchalo completo en</h3>
+      <div class="plataformas">
+        <a class="boton" href="https://open.spotify.com/search/Gustavo%20Cerati" target="_blank">Spotify</a>
+        <a class="boton boton-azul" href="https://www.youtube.com/results?search_query=Gustavo+Cerati" target="_blank">YouTube</a>
+      </div>
     </div>
 
   </div>

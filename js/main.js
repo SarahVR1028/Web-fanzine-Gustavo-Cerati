@@ -202,109 +202,26 @@ if (ventana) {
     }
   });
 }
+// 6. SONIDO DE GUITARRA
+// Suena al hacer clic en el botón de guitarra (escuchar.html),
+// en el vinilo de la portada y en las portadas de los discos.
+const guitarra = new Audio("assets/audio/guitarra.mp3");
 
+function tocarGuitarra(elemento) {
+  guitarra.currentTime = 0; // vuelve al inicio por si ya estaba sonando
+  guitarra.play();
 
-// 6. REPRODUCTOR DE AUDIO (escuchar.html)
-const audio = document.getElementById("audio");
-
-if (audio) {
-  const canciones = [
-    { nombre: "Instrumental 1", disco: "Pista de prueba", archivo: "assets/audio/instrumental-1.mp3" },
-    { nombre: "Instrumental 2", disco: "Pista de prueba", archivo: "assets/audio/instrumental-2.mp3" },
-    { nombre: "Instrumental 3", disco: "Pista de prueba", archivo: "assets/audio/instrumental-3.mp3" }
-  ];
-
-  let actual = 0;
-
-  const botonPlay = document.getElementById("play");
-  const barra = document.getElementById("barra");
-  const disco = document.getElementById("disco-giratorio");
-  const lista = document.getElementById("lista-canciones");
-
-  // Crear la lista de canciones
-  canciones.forEach(function (cancion, i) {
-    const li = document.createElement("li");
-    li.textContent = (i + 1) + ". " + cancion.nombre + " — " + cancion.disco;
-    li.addEventListener("click", function () {
-      cargarCancion(i);
-      reproducir();
-    });
-    lista.appendChild(li);
-  });
-
-  function cargarCancion(i) {
-    actual = i;
-    audio.src = canciones[i].archivo;
-    document.getElementById("nombre-cancion").textContent = canciones[i].nombre;
-    document.getElementById("disco-cancion").textContent = canciones[i].disco;
-
-    // Resaltar la canción en la lista
-    const items = lista.querySelectorAll("li");
-    items.forEach(function (item) {
-      item.classList.remove("sonando");
-    });
-    items[i].classList.add("sonando");
-  }
-
-  function reproducir() {
-    audio.play();
-    botonPlay.textContent = "⏸";
-    disco.classList.add("girando");
-  }
-
-  function pausar() {
-    audio.pause();
-    botonPlay.textContent = "▶";
-    disco.classList.remove("girando");
-  }
-
-  botonPlay.addEventListener("click", function () {
-    if (audio.paused) {
-      reproducir();
-    } else {
-      pausar();
-    }
-  });
-
-  document.getElementById("siguiente").addEventListener("click", function () {
-    cargarCancion((actual + 1) % canciones.length);
-    reproducir();
-  });
-
-  document.getElementById("anterior").addEventListener("click", function () {
-    cargarCancion((actual - 1 + canciones.length) % canciones.length);
-    reproducir();
-  });
-
-  // Convertir segundos a formato 0:00
-  function formatoTiempo(segundos) {
-    const min = Math.floor(segundos / 60);
-    let seg = Math.floor(segundos % 60);
-    if (seg < 10) {
-      seg = "0" + seg;
-    }
-    return min + ":" + seg;
-  }
-
-  // Mover la barra mientras suena
-  audio.addEventListener("timeupdate", function () {
-    if (audio.duration) {
-      barra.value = (audio.currentTime / audio.duration) * 100;
-      document.getElementById("tiempo-actual").textContent = formatoTiempo(audio.currentTime);
-      document.getElementById("tiempo-total").textContent = formatoTiempo(audio.duration);
-    }
-  });
-
-  // Adelantar o retroceder con la barra
-  barra.addEventListener("input", function () {
-    audio.currentTime = (barra.value / 100) * audio.duration;
-  });
-
-  // Cuando termina una canción pasa a la siguiente
-  audio.addEventListener("ended", function () {
-    cargarCancion((actual + 1) % canciones.length);
-    reproducir();
-  });
-
-  cargarCancion(0);
+  // pequeña animación para que se note que sonó
+  elemento.classList.remove("sonando");
+  void elemento.offsetWidth; // truco para poder repetir la animación
+  elemento.classList.add("sonando");
 }
+
+const cosasQueSuenan = document.querySelectorAll("#boton-guitarra, .vinilo, .disco .foto");
+
+cosasQueSuenan.forEach(function (elemento) {
+  elemento.addEventListener("click", function () {
+    tocarGuitarra(elemento);
+  });
+});
+
